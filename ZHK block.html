@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ЖК.онлайн</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://widget.cloudpayments.ru/bundles/checkout"></script>
+
+
+</head>
+<body>
+   
+        
+            <div id="test-block-1" style="margin:0 auto; width: 360px; height: 641px; border: 2px solid rgb(85, 231, 112);"></div>
+            <script>
+                // обязательная функция инициализации виджета
+                function initZHKWidget(callback) {
+                    var timer = setInterval(() => {
+                        if (typeof ZhkOnlineWidget === "undefined") return;
+                    clearInterval(timer);
+                    callback();
+                }, 500);
+                }
+
+                initZHKWidget(() => {
+                    var inHtmlTest = new ZhkOnlineWidget();
+                inHtmlTest.show({
+                    popup: false, // если false, то выводим виджет в html блоке
+
+                    blockID: 'test-block-1', // id html элемента, куда будет встроен виджет
+                });
+                })
+            </script>
+
+
+    <script type="text/javascript" src="https://widget.zhk.online/static/js/main.js"></script>
+</body></html>

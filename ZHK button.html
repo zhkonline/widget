@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ЖК.онлайн</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://widget.cloudpayments.ru/bundles/checkout"></script>
+</head>
+<body>
+            <div>
+                <button onclick="widgetShowPopUp()">ЖК.онлайн кнопка</button>
+                <script>
+                    function widgetShowPopUp() {
+                        var zhkOnlineWidget = new ZhkOnlineWidget();
+                        zhkOnlineWidget.show({
+                            popup: true, // если true, то выводим виджет в попапе
+
+                        });
+                    }
+                </script>
+        </div>
+    <script type="text/javascript" src="https://widget.zhk.online/static/js/main.js"></script>
+</body></html>
